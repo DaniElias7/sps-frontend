@@ -1,0 +1,214 @@
+/* --- General Container Styles --- */
+.container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 25px;
+  max-width: 1280px;
+  margin: 30px auto;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Header (Title & Top Buttons) --- */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.heading {
+  color: #343a40;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Base styles for Header buttons (shared styles) */
+.createButton, .logoutButton {
+  padding: 9px 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.createButton:hover, .logoutButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Create Button */
+.createButton {
+  background-color: #007bff;
+  color: #fff;
+}
+.createButton:hover {
+  background-color: #0056b3;
+}
+
+/* Logout Button */
+.logoutButton {
+  background-color: #6c757d;
+  color: #fff;
+}
+.logoutButton:hover {
+  background-color: #5a6268;
+}
+
+/* --- Table Styles --- */
+.table {
+  width: 100%;
+  /* Use collapse for better border handling */
+  border-collapse: collapse;
+  margin-top: 0;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Table Header (TH) --- */
+.th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.8rem;  
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: bottom;
+}
+
+/* --- Table Data Cells (TD) --- */
+.td {
+  border-bottom: 1px solid #e9ecef;
+  padding: 7px 16px;
+  vertical-align: middle;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* --- Table Rows (TR) --- */
+/* Subtle hover effect on table body rows */
+tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+/* Remove bottom border from the last row for a clean look */
+tbody tr:last-child .td {
+  border-bottom: none;
+}
+
+/* --- Actions Cell & Buttons --- */
+.actions {
+  text-align: right;
+  /* Prevent buttons from wrapping */
+  white-space: nowrap;
+  padding-right: 10px;
+}
+
+/* Common styles for buttons inside the table */
+.editButton, .deleteButton {
+  padding: 6px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  font-size: 0.85rem;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.editButton:hover, .deleteButton:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* Edit Button (Table) */
+.editButton {
+  background-color: "lightgray";
+  color: #000;
+}
+
+/* Delete Button (Table) */
+.deleteButton {
+  background-color: #dc3545; /* Red */
+}
+.infoMessage {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Loading and Error States --- */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.3rem;
+  color: #6c757d;
+  padding: 20px;
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 15px 20px;
+  margin: 25px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .headerActions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .th, .td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  .th {
+    font-size: 0.75rem;
+  }
+  .actions {
+    text-align: left;
+    padding-right: 8px;
+  }
+  .editButton, .deleteButton {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    margin: 0 2px;
+  }
+}

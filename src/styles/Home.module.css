@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: white;
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.heading {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.enterButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+}
